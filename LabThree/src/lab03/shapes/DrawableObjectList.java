@@ -1,5 +1,5 @@
 package lab03.shapes;
-
+import java.util.ArrayList;
 import java.awt.*;
 
 /**
@@ -9,11 +9,14 @@ import java.awt.*;
  * drawing or scaling all of the objects.
  */
 public class DrawableObjectList {
+	
+	private ArrayList<Drawable> drawObjects;
 
     /**
      * Construct a new empty DrawableObjectList.
      */
     public DrawableObjectList() {
+    		drawObjects = new ArrayList<Drawable>();
     }
 
     /**
@@ -22,7 +25,7 @@ public class DrawableObjectList {
      * @return the size of the list.
      */
     public int getSize() {
-        return -1;
+        return drawObjects.size();
     }
 
     /**
@@ -31,6 +34,7 @@ public class DrawableObjectList {
      * @param obj the Drawable object to be added.
      */
     public void addDrawable(Drawable obj) {
+    		drawObjects.add(obj);
     }
 
     /**
@@ -40,6 +44,7 @@ public class DrawableObjectList {
      * @param obj the Drawable object to remove.
      */
     public void removeDrawable(Drawable obj) {
+    		drawObjects.remove(obj);
     }
 
     /**
@@ -52,6 +57,10 @@ public class DrawableObjectList {
      * @param g the Graphics object on which to draw the objects.
      */
     public void drawAll(Graphics g) {
+    		for(Drawable dr: drawObjects) {
+    				dr.draw(g);
+    			
+    		}
     }
 
     /**
@@ -63,5 +72,10 @@ public class DrawableObjectList {
      * @param factor the factor by which to scale the Scaleable objects.
      */
     public void scaleAll(double factor) {
+    		for(Drawable dr:drawObjects) {
+    			if (dr instanceof Scaleable) {
+    				((Scaleable) dr).scale(factor);
+    			}
+    		}
     }
 }

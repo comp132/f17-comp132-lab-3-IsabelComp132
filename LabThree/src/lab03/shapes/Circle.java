@@ -99,7 +99,7 @@ public class Circle implements Drawable, Scaleable {
     // === Implementation of the Scaleable interface ===
     /**
      * Scale this Circle by the specified factor. For example a factor of 2.0
-     * will make the radius twice as bit and a factor of 0.5 will make it half
+     * will make the radius twice as big and a factor of 0.5 will make it half
      * as large. If the factor is negative the radius is not changed.
      * 
      * @param factor the factor by which this Circle is to be scaled.
