@@ -40,12 +40,12 @@ public class SquareTest {
     }
     
     @Test 
-    public void testSetRadius() {
+    public void testSetLength() {
         s1.setLength(10);
-        assertEquals("wrong radius", 10, s1.getLength());
+        assertEquals("wrong length", 10, s1.getLength());
         
         s1.setLength(-20);
-        assertEquals("wrong radius", 20, s1.getLength());
+        assertEquals("wrong length", 20, s1.getLength());
     }
     
     @Test
@@ -65,13 +65,13 @@ public class SquareTest {
     @Test
     public void testScale() {
         s1.scale(2.0);
-        assertEquals("wrong radius", 10, s1.getLength());
+        assertEquals("wrong length", 10, s1.getLength());
         
         s1.scale(0.5);
-        assertEquals("wrong radius", 5, s1.getLength());
+        assertEquals("wrong length", 5, s1.getLength());
         
         s1.scale(-2.0);
-        assertEquals("wrong radius", 5, s1.getLength());
+        assertEquals("wrong length", 5, s1.getLength());
     }
 
 }

@@ -24,10 +24,10 @@ public class Square implements Drawable, Scaleable {
      * initLength and color indicated by initColor. The new Square is visible by
      * default.
      * 
-     * @param initX the x coordinate of the center of the circle.
-     * @param initY the y coordinate of the center of the circle.
-     * @param initLength the side length of the circle.
-     * @param initColor the color of the circle.
+     * @param initX the x coordinate of the center of the square.
+     * @param initY the y coordinate of the center of the square.
+     * @param initLength the side length of the square.
+     * @param initColor the color of the square.
      */
     public Square(int initX, int initY, int initLength, Color initColor) {
         x = initX;
